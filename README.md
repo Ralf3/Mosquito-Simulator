@@ -1,7 +1,6 @@
 # Mosquito-Simulator
 Simulates the spread of WestNilVirus a combination of ODE and spatial movement (Julia implementation)
 
-# Mosquito-Simulator a Julia Implementation
 ## Simulation control
 The file "control.jl" contains the central parameters for controlling a simulation: <br>
 
@@ -75,24 +74,17 @@ An overview of the development of mosquitoes and birds is shown in the following
 
 ### Some control functions
 
-The solj2df() function calculates a DataFrame that displays the development
+The **solj2df()** function calculates a DataFrame that displays the development
 (L,SM,EM,IM,SB,EB,IB,RB,DB) as a table. dfx=solj2df(); is called at the end of control.jl.
 
 #### df1 displays lines from 1:steps as table.
 
-Row  │ L     | SM    | EM    | IM    | SB    | EB    | IB    | RB    | DB    |
-     │Float64|Float64|Float64|Float64|Float64|Float64|Float64|Float64|Float64|
------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
-   1 │ 100.0 | 500.0 | 0.0   | 50.0  | 500.0 | 30.0  | 30.0  | 0.0   | 0.0   |
-   2 │ 129.84| 488.0 | 1.0   | 49.0  | 516.0 | 11.0  | 42.0  | 2.0   | 10.0  |
-   3 │ 125.38| 475.0 | 1.0   | 45.0  | 535.0 | 7.0   | 29.0  | 4.0   | 27.0  |
-   4 │ 90.979| 453.0 | 1.0   | 41.0  | 554.0 | 3.0   | 25.0  | 5.0   | 38.0  |
-
-
-#### select an row of dfx
-**findfirst(==(maximum(dfx.SM)),dfx.SM)** Finds the time with the maximum number of mosquitoes <br>
-**findfirst(==(maximum(dfx.SB)),dfx.SB)** Finds the time with the maximum number of birds <br>
-**switch(time)**  jumps at this time <br>
+| Row | L | SM | EM | IM | SB | EB | IB | RB | DB |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|   1 | 100.0  | 500.0 | 0.0   | 50.0  | 500.0 | 30.0  | 30.0  | 0.0   | 0.0   |
+|   2 | 129.84 | 488.0 | 1.0   | 49.0  | 516.0 | 11.0  | 42.0  | 2.0   | 10.0  |
+|   3 | 125.38 | 475.0 | 1.0   | 45.0  | 535.0 | 7.0   | 29.0  | 4.0   | 27.0  |
+|   4 | 90.979 | 453.0 | 1.0   | 41.0  | 554.0 | 3.0   | 25.0  | 5.0   | 38.0  |
 
 #### selected visualization commands of dfx
 
@@ -164,3 +156,4 @@ from the controls. These cannot be restored! <br>
 
 Remark: Working with the database is often limited to setting the valid flag to false and
 the subsequent removal of the selected simulation from the database by clean_controls.
+
