@@ -63,6 +63,9 @@ function save_control()
     # save the dfx
     # ------------
     dfx=solj2df()
+    if(isdir("results")==false)
+        mkdir("results")
+    end
     dst=string("results/","result_",SAVE["ID"],".csv")
     CSV.write(dst,dfx,delim=';')
     df,dfx

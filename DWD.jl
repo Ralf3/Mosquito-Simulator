@@ -45,8 +45,9 @@ Magdeburg["alt"]=79
 
 # load the climate data
 # ---------------------
+path_dwd="./DWD/"
 function load_DWD(selector,from=20200101,to=20201231)
-    file=string("../DWD/",selector["wetter"],".txt")
+    file=string(path_dwd,selector["wetter"],".txt")
     table=CSV.File(file) |> DataFrame
     tmk=table[((table[!, "MESS_DATUM"] .>= from) .&
                (table[!, "MESS_DATUM"] .< to)), :" TMK"];
@@ -55,7 +56,7 @@ function load_DWD(selector,from=20200101,to=20201231)
 end
 
 function load_Wind(selector,from=2020010100,to=2020123100)
-    file=string("../DWD/",selector["wind"],".txt")
+    file=string(path_dwd,selector["wind"],".txt")
     table=CSV.File(file) |> DataFrame
     table1=table[((table[!, "MESS_DATUM"] .>= from) .&
         (table[!, "MESS_DATUM"] .< to)), :]

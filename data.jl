@@ -1,8 +1,8 @@
 # load the spatial data
 # =====================
 
+path=string("./",R,"/")
 if(R=="Bitterfeld")
-    path=string("../Geodaten/",R,"/")
     siedlung800d=load_grid(string(path,"Bitterfeld_Siedlung800d.jld2"))
     siedlung800dx=load_grid(string(path,"Bitterfeld_Siedlung800dx.jld2"))
     siedlung800dy=load_grid(string(path,"Bitterfeld_Siedlung800dy.jld2"))
@@ -15,7 +15,6 @@ if(R=="Bitterfeld")
 end
 
 if(R=="Magdeburg")
-    path=string("../Geodaten/",R,"/")
     siedlung800d=load_grid(string(path,"Magdeburg_Siedlung800d.jld2"))
     siedlung800dx=load_grid(string(path,"Magdeburg_Siedlung800dx.jld2"))
     siedlung800dy=load_grid(string(path,"Magdeburg_Siedlung800dy.jld2"))
@@ -28,7 +27,6 @@ if(R=="Magdeburg")
 end
 
 if(R=="Trebnitz")
-    path=string("../Geodaten/",R,"/")
     siedlung800d=load_grid(string(path,"Trebnitz_Siedlung800d.jld2"))
     siedlung800dx=load_grid(string(path,"Trebnitz_Siedlung800dx.jld2"))
     siedlung800dy=load_grid(string(path,"Trebnitz_Siedlung800dy.jld2"))
@@ -54,7 +52,6 @@ if(R=="Dueben")
 end
 
 if(R=="Radebeul")
-    path=string("../Geodaten/",R,"/")
     siedlung800d=load_grid(string(path,"Radebeul_Siedlung800d.jld2"))
     siedlung800dx=load_grid(string(path,"Radebeul_Siedlung800dx.jld2"))
     siedlung800dy=load_grid(string(path,"Radebeul_Siedlung800dy.jld2"))
