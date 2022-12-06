@@ -72,8 +72,8 @@ function save_control()
 end # function save_control
 
 # shows the stored simulations as DataFrame
-function read_simulations(path="./")
-    filename=string(path,"simulations.csv")
+function read_simulations(dd_path="./")
+    filename=string(dd_path,"simulations.csv")
     if(isfile(filename))
         df = CSV.File(filename,delim=';',
                       types=[Int64,String,String,String,Int64,Int64,
