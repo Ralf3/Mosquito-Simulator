@@ -66,8 +66,8 @@ if the bird is already in: <br>
 RB ==> converts an infectious bird into a recovered bird <br>
 DB ==> converts an infectious bird in a dead bird <br>
 
-The movement of the mosquitoes is carried out on a square grid of 25km*25km with a
-cell size of 100*100m. The mosquito can move over a number of time steps (walkn)
+The movement of the mosquitoes is carried out on a square grid of 25km\*25km with a
+cell size of 100m\*100m. The mosquito can move over a number of time steps (walkn)
 move freely in the region. <br>
 
 All mosquitoes are stored in the global array: array_of_mosqu=[] (see util.jl)
