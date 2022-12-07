@@ -35,9 +35,9 @@ function save_control()
     SAVE["IM"]=Int64(round(u0mx[4])) # number of infectious mosquitoes at t=0
     SAVE["B"]=Int64(round(u0bx[1]))  # number of suspected birds at t=0
     SAVE["IB"]=Int64(round(u0bx[3])) # number of infectious birds at t=0
-    SAVE["infstepIB"]=infstepIB      # simulation step of infection bird
+    SAVE["infstepIB"]=infstepIB0      # simulation step of infection bird
     SAVE["addIB"]=addIB              # number of infectious birds
-    SAVE["infstepIM"]=infstepIM      # simulation step of infection mosquites
+    SAVE["infstepIM"]=infstepIM0      # simulation step of infection mosquites
     SAVE["addIM"]=addIM              # number of infectious mosquites
     SAVE["walkn"]=walkn              # number of walks/day
     SAVE["walk_target"]=walk_targets # target of the walk
@@ -119,6 +119,10 @@ function clean_controls()
     for i in 1:size(df)[1]
         if(df[i,:].valid==false)
             filename=string("controls/","control_",df[i,:].ID,".jl")
+            if(isfile(filename))
+                rm(filename)
+            end
+            filename=string("results/","result_",df[i,:].ID,".csv")
             if(isfile(filename))
                 rm(filename)
             end

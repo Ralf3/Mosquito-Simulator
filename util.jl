@@ -24,6 +24,10 @@ using JLD2
 using Dierckx
 # using Plots
 
+# save the infstepIM and infstepIB
+infstepIM0=Int64(infstepIM)
+infstepIB0=Int64(infstepIB)
+
 # plot the resm and resb
 # ======================
 
