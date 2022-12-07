@@ -15,8 +15,8 @@ remark="Abschluss"    # 12 letters limit
 u0b=[300.0,0.0,0.0,0.0,0.0] # start values for birds (SEIRD)
 u0m=[100.0,500.0,0.0,50.0] # start values for mosquitoes (LSEI)
 steps=200                   # number of simulation steps
-infstepIB=0.                # set infstepIB day or 0. ==> no step 
-addIB= 0                    # default only 1 step
+infstepIB=20.                # set infstepIB day or 0. ==> no step 
+addIB=20                    # default only 1 step
 infstepIM=0.                # set infstepIM day or 0. ==> no step
 addIM = 0                   # default only 1 step
 walkn=1                     # number of walks/day

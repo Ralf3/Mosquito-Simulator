@@ -13,7 +13,7 @@ The simulator has been tested under Julia version 1.8.3, but should also run wit
 - Install Julia on your computer (I use Linux as OS).
 - simu.install contains all needed packages for the simulator. It can directly install the packages install.
 
-## Simulation control
+### Simulation control
 The file "control.jl" contains the central parameters for controlling a simulation: <br>
 to start the simulation, please include inside of Julia:
 **include("control.jl")**
@@ -79,7 +79,7 @@ If a mosquito dies or leaves the model region its state is set zombie,
 which is numeric as 1Z with Z=[SM=2,EM=3,IM=4] hence a 12 encodes a "zombie SM".
 Since birds stay near their nesting place, zombies play only a minor role. <br>
 
-## Evaluation of the dynamics of a simulation
+### Evaluation of the dynamics of a simulation
 
 An overview of the development of mosquitoes and birds is shown in the following functions:
 
@@ -151,7 +151,7 @@ ABM[k]=deepcopy(array_of_mosqu) and BRD[k]=deepcopy(array_of_birds). Then a call
 switch(sel::Int64), but also (gen_hist_m and gen_hist_b) would lead to an error message.
 The simulator could then run even on weak PCs.
 
-## Store of the simulations (controls) in a database
+### Store of the simulations (controls) in a database
 
 **df,dfx=save_control()**; creates a new entry at the end of a simulation
 into the database "simulations.csv", stores the control_{ID}.jl under controls.jl and
@@ -168,6 +168,5 @@ afterwards in the simulation environment.
 from the controls. These cannot be restored! <br>
 **activate(ID::Int64)**  overwrites the current control.jl with the control_{ID}.jl<br>
 
-Remark: Working with the database is often limited to setting the valid flag to false and
-the subsequent removal of the selected simulation from the database by clean_controls.
+Remark: Working with the database is often limited to setting the valid flag to false and the subsequent removal of the selected simulation from the database by clean_controls.
 
