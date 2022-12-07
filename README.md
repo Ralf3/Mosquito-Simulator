@@ -2,8 +2,11 @@
 Simulates the spread of WestNilVirus a combination of ODE and spatial movement (Julia implementation)
 
 ## General Remarks
-The Mosquito Simulator is completely written in Julia. The version presented here 
-contains executable code, with the restriction that of the available regions only the region Magdeburg is available. For this region the weather data is also provided. If you want to test other regions, please send me a personal message.
+The Mosquito Simulator is completely written in Julia. The version presented here contains executable code, with the restriction that of the available regions only the region Magdeburg is available. For this region the weather data is also provided. If you want to test other regions, please send me a personal message.
+
+## Simulation Example
+The control of a simulation and the analysis runs in Julia (Console). This proved to be powerful, but is not to everyone's taste. The available commands are simple, but can confuse the beginner. To overcome this barrier, the file README_Simulation.md was included under doc, which describes a complete simulation run. So it makes sense to have a look at it and then start with your own experiments.
+
 ### Installation
 The simulator has been tested under Julia version 1.8.3, but should also run with subsequent versions. To install the software please follow the steps below:
 
