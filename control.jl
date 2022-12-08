@@ -13,12 +13,12 @@ remark="Abschluss"    # 12 letters limit
 # define the parameters of the simulation
 # ---------------------------------------
 u0b=[300.0,0.0,0.0,0.0,0.0] # start values for birds (SEIRD)
-u0m=[500.0,100.0,0.0,50.0] # start values for mosquitoes (LSEI)
+u0m=[200.0,200.0,0.0,50.0] # start values for mosquitoes (LSEI)
 steps=200                   # number of simulation steps
 infstepIB=0.                # set infstepIB day or 0. ==> no step 
 addIB=10                    # default only 1 step
 infstepIM=0.                # set infstepIM day or 0. ==> no step
-addIM = 0                   # default only 1 step
+addIM = 10                   # default only 1 step
 walkn=1                     # number of walks/day
 walk_targets="model"     # the target of the walk s=string!
 initial_targets="siedlung"     # where the simulation starts from

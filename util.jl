@@ -26,7 +26,9 @@ using Dierckx
 
 # save the infstepIM and infstepIB
 infstepIM0=Int64(infstepIM)
+infstepIM = Float64(infstepIM)
 infstepIB0=Int64(infstepIB)
+infstepIB = Float64(infstepIB)
 
 # plot the resm and resb
 # ======================
