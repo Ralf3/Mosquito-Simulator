@@ -65,7 +65,6 @@ mM(T)=0.1*mL(T)
 βM(T)=biting_rate(T)*pM
 βB(T)=biting_rate(T)*pB
 
-
 function γM(T)
     if T<=15.0
         return 0
@@ -418,9 +417,5 @@ function simulation()
     end
 end
 
-
-
 solj = solve(jump_prob, Tsit5())
-# solj = solve(jump_prob, Tsit5(), callbacks=cbS)
-# jprob.prob.u0 .= [499,1,0]?
-#sol1,sol2=simulation()
+
